@@ -1,0 +1,221 @@
+@import "color";
+@import "veribal";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nepali Fonts";
+}
+.ok-container {
+  max-width: 1228px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-nav {
+  padding: 1.8em 0;
+  position: relative;
+  max-width: 300px;
+  .bottomright {
+    position: absolute;
+    bottom: 10px;
+    right: 19px;
+    font-size: 13px;
+  }
+  img {
+    max-width: 288px;
+    cursor: pointer;
+  }
+}
+
+.ok-navbar {
+  height: 50px;
+  padding: 0px !important;
+  background-color: #0d5dae;
+  .bar-item-icon {
+    color: #ffff;
+    background-color: #0f4a89;
+    line-height: 50px;
+    display: block;
+    padding: 0 20px;
+    font-size: 24px;
+  }
+
+  .nav-item-block {
+    // margin-left: 20px;
+    .bar-items {
+      display: block;
+      line-height: 50px;
+      padding: 0 15px !important;
+      color: #ffff !important;
+      font-family: "Nepali Fonts";
+      font-weight: 400;
+      &:hover {
+        background-color: #0e5095;
+      }
+    }
+    .active {
+      background-color: #0e5095;
+    }
+  }
+
+  .right-item {
+    float: right;
+    flex-direction: row !important;
+
+    @mixin icon-on-nav {
+      color: #ffff !important;
+      line-height: 50px;
+      display: block;
+      padding: 0 20px !important;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .search-icon {
+      background-color: #3074ba;
+      @include icon-on-nav();
+    }
+    .new-news {
+      @include icon-on-nav();
+      background-color: #0e5095;
+      font-size: 42px;
+      &:hover {
+        background-color: #ef9f2d;
+      }
+    }
+    .tranding-news {
+      @include icon-on-nav();
+      background-color: #072545;
+      font-size: 42px;
+    }
+    .englis {
+      line-height: 50px;
+      padding: 0 20px !important;
+      background: red;
+      font-family: "Lato", sans-serif;
+      color: #ffff !important;
+      cursor: pointer;
+      &:hover {
+        background-color: #0e5095;
+      }
+    }
+  }
+}
+// ------------tool tip----------------
+.tooltips {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.tooltips .tooltiptexts {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1;
+  width: 70px;
+  top: 100%;
+  left: 95%;
+  margin-left: -60px;
+  font-size: 12px;
+}
+.tooltips .new-upadate {
+  left: 83%;
+  width: 75px;
+}
+.tooltips:hover .tooltiptexts {
+  visibility: visible;
+}
+// --------------------------------------------
+
+.search_box {
+  background-color: #dfdbe5;
+  background-image: url("./../patterns/gravel.png");
+
+  .v-center {
+    padding: 15px 0 !important;
+  }
+
+  .search-input {
+    border-radius: 0;
+  }
+  .date-input-group .form-control {
+    padding-left: 2.375rem;
+  }
+
+  .date-input-group .input-group-icon {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    font-size: 24px;
+  }
+}
+
+.section {
+  overflow: hidden;
+  // ------------------
+  width: 100%;
+  z-index: 10;
+  // --------------
+  transition: transform 0.3s ease-out; // note that we're transitioning transform, not height!
+  position: absolute;
+  transform: scaleY(0); // implicit, but good to specify explicitly
+  transform-origin: top; // keep the top of the element in the same place. this is optional.
+}
+.section.collapsed {
+  transform: scaleY(1);
+  height: auto;
+
+  // height: 0;
+}
+
+.new-upadate {
+  background-color: #ffffff;
+  box-shadow: 0 4px 2px -2px gray;
+  position: absolute;
+  width: 100%;
+  // background-image: url("./../patterns/gravel.png");
+  .title {
+    background-color: #ebebeb;
+    padding: 20px 10px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Nepali Fonts";
+  }
+  .news-title {
+    font-size: 24px;
+    font-family: "Nepali Fonts";
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: #0e5095;
+    }
+  }
+}
+
+.newsupdatesection {
+  overflow: hidden;
+  // ------------------
+  z-index: 10;
+  // --------------
+  transition: transform 0.3s ease-out; // note that we're transitioning transform, not height!
+  transform: scaleY(0); // implicit, but good to specify explicitly
+  transform-origin: top; // keep the top of the element in the same place. this is optional.
+}
+
+.update-news-collapsed {
+  transform: scaleY(1);
+  height: auto;
+
+  // height: 0;
+}

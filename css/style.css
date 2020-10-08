@@ -1,0 +1,254 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+  font-family: "Nepali Fonts";
+  src: "./../fonts/Nepali.TTF";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nepali Fonts";
+}
+
+.ok-container {
+  max-width: 1228px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo-nav {
+  padding: 1.8em 0;
+  position: relative;
+  max-width: 300px;
+}
+
+.logo-nav .bottomright {
+  position: absolute;
+  bottom: 10px;
+  right: 19px;
+  font-size: 13px;
+}
+
+.logo-nav img {
+  max-width: 288px;
+  cursor: pointer;
+}
+
+.ok-navbar {
+  height: 50px;
+  padding: 0px !important;
+  background-color: #0d5dae;
+}
+
+.ok-navbar .bar-item-icon {
+  color: #ffff;
+  background-color: #0f4a89;
+  line-height: 50px;
+  display: block;
+  padding: 0 20px;
+  font-size: 24px;
+}
+
+.ok-navbar .nav-item-block .bar-items {
+  display: block;
+  line-height: 50px;
+  padding: 0 15px !important;
+  color: #ffff !important;
+  font-family: "Nepali Fonts";
+  font-weight: 400;
+}
+
+.ok-navbar .nav-item-block .bar-items:hover {
+  background-color: #0e5095;
+}
+
+.ok-navbar .nav-item-block .active {
+  background-color: #0e5095;
+}
+
+.ok-navbar .right-item {
+  float: right;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+}
+
+.ok-navbar .right-item .search-icon {
+  background-color: #3074ba;
+  color: #ffff !important;
+  line-height: 50px;
+  display: block;
+  padding: 0 20px !important;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ok-navbar .right-item .new-news {
+  color: #ffff !important;
+  line-height: 50px;
+  display: block;
+  padding: 0 20px !important;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #0e5095;
+  font-size: 42px;
+}
+
+.ok-navbar .right-item .new-news:hover {
+  background-color: #ef9f2d;
+}
+
+.ok-navbar .right-item .tranding-news {
+  color: #ffff !important;
+  line-height: 50px;
+  display: block;
+  padding: 0 20px !important;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #072545;
+  font-size: 42px;
+}
+
+.ok-navbar .right-item .englis {
+  line-height: 50px;
+  padding: 0 20px !important;
+  background: red;
+  font-family: "Lato", sans-serif;
+  color: #ffff !important;
+  cursor: pointer;
+}
+
+.ok-navbar .right-item .englis:hover {
+  background-color: #0e5095;
+}
+
+.tooltips {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.tooltips .tooltiptexts {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1;
+  width: 70px;
+  top: 100%;
+  left: 95%;
+  margin-left: -60px;
+  font-size: 12px;
+}
+
+.tooltips .new-upadate {
+  left: 83%;
+  width: 75px;
+}
+
+.tooltips:hover .tooltiptexts {
+  visibility: visible;
+}
+
+.search_box {
+  background-color: #dfdbe5;
+  background-image: url("./../patterns/gravel.png");
+}
+
+.search_box .v-center {
+  padding: 15px 0 !important;
+}
+
+.search_box .search-input {
+  border-radius: 0;
+}
+
+.search_box .date-input-group .form-control {
+  padding-left: 2.375rem;
+}
+
+.search_box .date-input-group .input-group-icon {
+  position: absolute;
+  z-index: 5;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+  font-size: 24px;
+}
+
+.section {
+  overflow: hidden;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  position: absolute;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.section.collapsed {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  height: auto;
+}
+
+.new-upadate {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 2px -2px gray;
+          box-shadow: 0 4px 2px -2px gray;
+  position: absolute;
+  width: 100%;
+}
+
+.new-upadate .title {
+  background-color: #ebebeb;
+  padding: 20px 10px;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Nepali Fonts";
+}
+
+.new-upadate .news-title {
+  font-size: 24px;
+  font-family: "Nepali Fonts";
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.new-upadate .news-title:hover {
+  color: #0e5095;
+}
+
+.newsupdatesection {
+  overflow: hidden;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.update-news-collapsed {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  height: auto;
+}
+/*# sourceMappingURL=style.css.map */
